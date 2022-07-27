@@ -7,13 +7,19 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier --config ./.prettierrc  src/**/*.ts --write",
     "eslint": "eslint src/**/*.ts",
-    "build": "npx tsc"
+    "build": "npx tsc",
+    "jasmine": "jasmine"
   },
   "author": "Mohamed Abobakr",
   "license": "ISC",
   "devDependencies": {
+    "@types/jasmine": "^4.0.3",
     "@typescript-eslint/eslint-plugin": "^5.31.0",
     "@typescript-eslint/parser": "^5.31.0",
     "eslint": "^8.20.0"
+  },
+  "dependencies": {
+    "jasmine": "^4.3.0",
+    "jasmine-spec-reporter": "^7.0.0"
   }
 }
