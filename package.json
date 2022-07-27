@@ -1,0 +1,19 @@
+{
+  "name": "fstack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --config ./.prettierrc  src/**/*.ts --write",
+    "eslint": "eslint src/**/*.ts",
+    "build": "npx tsc"
+  },
+  "author": "Mohamed Abobakr",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "eslint": "^8.20.0"
+  }
+}
