@@ -1,7 +1,12 @@
-const x = 2;
-const y = 5;
-const add = (x: number, y: number): number => {
-    return x + y;
-};
+import express from 'express';
+import dotenv from 'dotenv';
 
-export default add;
+dotenv.config();
+
+const app = express();
+
+const port = process.env.port;
+
+app.listen(port, () => {
+    console.log(`listening on port ${port}`);
+});
