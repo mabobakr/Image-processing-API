@@ -29,3 +29,11 @@ run ``` npm run test ```
 ## Note
 - Images are resized once for each size then saved for subsequent requests
 - You can resize images to multiple sizes as the thumb name contains the dimensions
+
+## screenshots
+![full Image](./screenshots/circle-full.png)
+
+![resized image](./screenshots/circle-1000-1000.png)
+
+![space size 1](./screenshots/space-100-400.png)
+![space size 2](./screenshots/space-1000-800.png)
