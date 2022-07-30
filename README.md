@@ -25,3 +25,7 @@ run ``` npm run test ```
 
 - run ``` npm run eslint ``` to lint the code
 - run ``` npm run prettier ``` to format the code
+
+## Note
+- Images are resized once for each size then saved for subsequent requests
+- You can resize images to multiple sizes as the thumb name contains the dimensions
