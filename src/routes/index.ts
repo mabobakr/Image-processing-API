@@ -4,9 +4,9 @@ import imageRouter from './api/image';
 const routes = express.Router();
 
 routes.get('/', (req, res) => {
-    res.status(200).send('if you want the 100 100 go for /api/image?eh=100');
+    res.status(200).send('go for /images to resize');
 });
 
-routes.use('/image', imageRouter);
+routes.use('/images', imageRouter);
 
 export default routes;
