@@ -14,17 +14,27 @@ router.get(
         next: express.NextFunction
     ): Promise<void> => {
         let filename = req.query.filename;
-        const width = parseInt(req.query.width as string);
-        const height = parseInt(req.query.height as string);
+        const query_width = req.query.width as string;
+        const query_height = req.query.height as string;
 
-        if (!width || !height || !filename) {
+        if (!filename) {
+            return next(
+                createError(400, 'Please Add filename in query parameters')
+            );
+        }
+
+        const valid = /^\d+$/
+        if (!valid.test(query_width) || !valid.test(query_height)) {
             return next(
                 createError(
                     400,
-                    'Add filename, width and height in query parameters'
+                    'Query parameters must have integer width and height'
                 )
             );
         }
+
+        const width = parseInt(query_width)
+        const height = parseInt(query_height)
 
         let assetPath = __dirname + '/../../../assets';
         assetPath = path.resolve(assetPath).normalize();
