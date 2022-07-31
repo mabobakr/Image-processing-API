@@ -3,7 +3,7 @@ import supertest from 'supertest';
 
 const request = supertest(app);
 
-describe('API root endpoint testing', () => {
+describe('API root endpoint testing', (): void => {
     it('It should return response with status code 200', async () => {
         const response = await request.get('/api');
         expect(response.status).toBe(200);

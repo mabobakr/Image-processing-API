@@ -1,12 +1,12 @@
 import resize from '../resize';
 import path from 'path';
 
-describe('Image Processing testing suite', () => {
-    it("should throw an error if file doesn't exist", async () => {
+describe('Image Processing testing suite', (): void => {
+    it("should throw an error if file doesn't exist", async (): Promise<void> => {
         await expectAsync(resize('non-existing', 100, 100)).toBeRejected();
     });
 
-    it('should return a buffer if file exists', async () => {
+    it('should return a buffer if file exists', async (): Promise<void> => {
         let fPath = __dirname + '/../../assets/full';
         fPath = path.resolve(fPath).normalize();
 

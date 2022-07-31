@@ -3,13 +3,13 @@ import supertest from 'supertest';
 
 const request = supertest(app);
 
-describe('Images endpoint testing', () => {
-    it('It should return 400 bad request if query parameters are not provided', async () => {
+describe('Images endpoint testing', (): void => {
+    it('It should return 400 bad request if query parameters are not provided', async (): Promise<void> => {
         const response = await request.get('/api/images');
         expect(response.status).toBe(400);
     });
 
-    it("should return 404 not found if the image doesn't exist", async () => {
+    it("should return 404 not found if the image doesn't exist", async (): Promise<void> => {
         const response = await request.get('/api/images').query({
             filename: 'non-existing',
             width: 100,
